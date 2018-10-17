@@ -79,6 +79,7 @@ class XMLFormater: NSObject, XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
+        let string = string.replacingOccurrences(of: "&", with: "&amp;")
         self.foundCharacters += string
     }
     
